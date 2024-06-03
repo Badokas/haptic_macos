@@ -6,12 +6,12 @@ if(CMAKE_SYSTEM_NAME STREQUAL Windows OR CMAKE_SYSTEM_NAME STREQUAL Darwin)
   option(BUILD_SHARED_LIBS "Build shared libraries by default" YES)
 endif()
 
-add_library(HapticMaocs HapticMaocs.cpp)
-add_dependencies(HapticMaocs SwiftHaptics)
-set_target_properties(HapticMaocs PROPERTIES
+add_library(HapticMacos HapticMacos.cpp)
+add_dependencies(HapticMacos SwiftHaptics)
+set_target_properties(HapticMacos PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_BINARY_DIR})
 
-target_link_libraries(HapticMaocs PRIVATE hapticmacos)
+target_link_libraries(HapticMacos PRIVATE hapticmacos)
 
 # add_library(hapticmacos SHARED IMPORTED)
 # set_target_properties(hapticmacos
