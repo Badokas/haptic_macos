@@ -8,9 +8,6 @@ endif()
 
 add_library(HapticMacos HapticMacos.cpp)
 add_dependencies(HapticMacos SwiftHaptics)
-set_target_properties(HapticMacos PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_BINARY_DIR})
-
 target_link_libraries(HapticMacos PRIVATE SwiftHaptics)
 
 # add_library(hapticmacos SHARED IMPORTED)
